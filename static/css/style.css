@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: rgb(131,205,218);
+    background: linear-gradient(90deg, rgba(131,205,218,1) 0%, rgba(202,80,117,1) 50%, rgba(251,218,183,1) 100%);
+}
+header{
+    background-color: transparent;
+}
+
+.page-footer{
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+footer{
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+
+}
+.page-push{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ниже home */
+.navbar {
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.navbar-nav .nav-link {
+    color: #007bff;
+}
+
+.search-section {
+    background: linear-gradient(135deg, #007bff, #6f42c1);
+        color: #fff;
+        padding: 80px 0;
+}
+
+.search-section h2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-control, .form-control-range, .btn-primary {
+    border-radius: 30px;
+}
+
+.btn-primary {
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.hero-section {
+    background-image: url('/images/office-bg.jpg');
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+.hero-section h1, p {
+    animation: fadeIn 1.5s ease-out;
+}
+.hero-section .btn {
+    animation: fadeInUp 2s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.about-us i {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+footer .social-icons a:hover {
+    color: #007bff;
+}
+
+/*registration */
+
+.registration-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('/images/office-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+.registration-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+/*catalog*/
+.card {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+#loading {
+    display: none;
+}
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+#error-message {
+    display: none;
+    color: red;
+    text-align: center;
+}
+.card {
+    height: 100%; /* Позволяет карточке занимать всю доступную высоту */
+}
+
+.card img {
+    object-fit: cover; /* Изображение будет обрезано для заполнения карточки */
+    height: 200px; /* Фиксированная высота для изображения */
+    width: 100%; /* Ширина изображения равна ширине карточки */
+}
+
+.card-body {
+    display: flex; /* Используем flexbox для размещения содержимого */
+    flex-direction: column; /* Размещаем содержимое вертикально */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    height: 100%; /* Позволяет содержимому занимать всю высоту карточки */
+}
+
+/* личный кабинет */
+
+.user-icon {
+    font-size: 32px; /* Увеличение размера иконки */
+    color: #007bff; /* Цвет иконки */
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.user-icon:hover {
+    color: #0056b3; /* Цвет при наведении */
+}
+
+.card-body > h4,
+.card-body > hr,
+.card-body > ul,
+.card-body > a {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.navbar {
+    padding: 9px 0; /* Увеличьте значение для большей толщины */
+}
