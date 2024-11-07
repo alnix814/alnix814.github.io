@@ -7,7 +7,7 @@ import psycopg2
 import datetime
 
 app = Flask(__name__)
-load_dotenv(dotenv_path='D:/myfiles/pythonSaves/RentEase/secret.env')
+load_dotenv()
 conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cursor = conn.cursor()
 
