@@ -7,6 +7,7 @@ import psycopg2
 import datetime
 
 app = Flask(__name__)
+app.secret_key = '1234'
 load_dotenv()
 conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cursor = conn.cursor()
@@ -251,7 +252,7 @@ def catalog_data():
 
     return jsonify({'items': items})
 
-app.secret_key = '1234'
+
 
 if __name__ == '__main__':
     app.run(debug=True)
