@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 from werkzeug.security import check_password_hash, generate_password_hash
 from functools import wraps
+from dotenv import load_dotenv
+import os
 import psycopg2
 import datetime
 
 app = Flask(__name__)
-
-conn = psycopg2.connect(database="postgres", user="postgres.kvhsfvtiqohqjdapiier", password="(((1304artem)))Aa", host="aws-0-eu-central-1.pooler.supabase.com", port="6543")
+load_dotenv(dotenv_path='D:/myfiles/pythonSaves/RentEase/secret.env')
+conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cursor = conn.cursor()
 
 def login_required(f):
@@ -232,7 +234,9 @@ def catalog_data():
     """
 
     cursor.execute(sql, (per_page, offset))
+    print(f"SQL запрос: {cursor.query}")
     properties = cursor.fetchall()
+
 
     items = [
         {
