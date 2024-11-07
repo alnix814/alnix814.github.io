@@ -251,6 +251,7 @@ def catalog_data():
 
     return jsonify({'items': items})
 
+app.secret_key = '1234'
+
 if __name__ == '__main__':
-    app.secret_key = '1234'
     app.run(debug=True)
