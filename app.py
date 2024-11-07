@@ -8,7 +8,7 @@ import datetime
 
 app = Flask(__name__)
 app.secret_key = '1234'
-load_dotenv()
+load_dotenv(dotenv_path="/etc/secrets/secret.env")
 conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cursor = conn.cursor()
 
